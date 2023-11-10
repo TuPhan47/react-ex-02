@@ -1,0 +1,89 @@
+.l-footer {
+	// position: absolute;
+	// width: 100%;
+	// height: 52.9rem;
+	// bottom: 0;
+	// left: 0;
+	background: var(--purple);
+	@media only screen and (max-width: 959px) {
+		height: auto;
+	} /* endMedia */
+	&__wrapper {
+		margin-left: -10rem;
+		margin-right: -20rem;
+		display: flex;
+		flex-wrap: wrap;
+		@media only screen and (max-width: 1024px) {
+			margin-left: -5rem;
+			margin-right: -5rem;
+		} /* endMedia */
+		@media only screen and (max-width: 959px) {
+			display: block;
+		} /* endMedia */
+	}
+	&-col {
+		margin-top: 7rem;
+		padding: 0 10rem;
+		@media only screen and (max-width: 1024px) {
+			padding: 0 5rem;
+		} /* endMedia */
+		@media only screen and (max-width: 959px) {
+			margin-top: 4rem;
+		} /* endMedia */
+	}
+	&__logo {
+		font-size: 4rem;
+		font-weight: bold;
+		color: var(--white);
+		& span {
+			color: var(--green);
+		}
+		@media only screen and (max-width: 768px) {
+			font-size: 3.2rem;
+		} /* endMedia */
+	}
+	&__title {
+		font-size: 2.4rem;
+		font-weight: bold;
+		letter-spacing: 0.2em;
+		color: var(--white);
+		@media only screen and (max-width: 768px) {
+			font-size: 2rem;
+		} /* endMedia */
+	}
+	&-nav {
+		&__item {
+			margin-top: 1rem;
+			& a {
+				color: var(--green);
+			}
+		}
+		&-social {
+			display: flex;
+			margin-left: -2rem;
+			margin-right: -2rem;
+			&__item {
+				padding: 0 2rem;
+				& a {
+					font-size: 1.4rem;
+					color: var(--green);
+				}
+			}
+			@media only screen and (max-width: 768px) {
+				display: none;
+			} /* endMedia */
+		}
+	}
+	&__down {
+		margin-top: 16.6rem;
+		padding-top: 7rem;
+		display: flex;
+		justify-content: space-between;
+		border-top: 0.1rem solid var(--green);
+		@media only screen and (max-width: 768px) {
+			margin-top: 8rem;
+			padding: 2rem 0;
+			justify-content: center;
+		} /* endMedia */
+	}
+}

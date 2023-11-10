@@ -1,0 +1,28 @@
+#l-header {
+	/* fallback for old browsers */
+	background: linear-gradient(360deg, #4831d4 70%, #ccf381 30%);
+	/* Chrome 10-25, Safari 5.1-6 */
+	background: -webkit-linear-gradient(360deg, #4831d4 70%, #ccf381 30%);
+	// position: fixed;
+	// top: 0;
+	// left: 0;
+	width: 100%;
+}
+#l-header #sitelogo {
+	width: 20rem;
+}
+@media only screen and (max-width: 767px) {
+	#l-header #sitelogo {
+		width: 12rem;
+	}
+} /* endMedia */
+.l-header__wrapper {
+	padding: 3rem 0;
+	margin: 0 4vw;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	@media only screen and (max-width: 959px) {
+		margin: 0 2rem;
+	} /* endMedia */
+}

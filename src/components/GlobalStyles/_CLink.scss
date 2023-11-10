@@ -1,0 +1,110 @@
+.c-link {
+	color: var(--color-text);
+	&-wrapper {
+		background: var(--white);
+	}
+	&__item {
+		border-right: 2px solid rgba($color: #4831d4, $alpha: 0.5);
+		&:last-of-type {
+			border-right: none;
+		}
+	}
+	&__inner {
+		padding: 9rem;
+	}
+	&__text {
+		margin-top: 2rem;
+		font-size: 2.4rem;
+	}
+	&__button {
+		position: relative;
+		margin-top: 6rem;
+		display: inline-block;
+		min-width: 30rem;
+		padding: 2.5rem 0 2.5rem 3rem;
+		border: 1px solid var(--primary);
+		transition: 0.3s;
+		overflow: hidden;
+		z-index: 1;
+		&::before {
+			content: '';
+			width: 0;
+			height: 400%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%) rotate(45deg);
+			background: var(--primary);
+			transition: 0.5s ease;
+			display: block;
+			z-index: -1;
+		}
+		&__inner {
+			position: relative;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+		}
+		&__text {
+			font-size: 2rem;
+			letter-spacing: 0.2em;
+			color: var(--primary);
+			transition: 0.3s;
+		}
+		&__arrow {
+			&--right {
+				position: relative;
+				display: flex;
+				align-items: center;
+				margin: 0 3rem;
+				width: 5rem;
+				transition: all 0.3s;
+				&::before {
+					content: '';
+					display: block;
+					width: 4.4rem;
+					height: 0.1rem;
+					background: var(--primary);
+					transition: all 0.3s;
+				}
+				&::after {
+					content: '';
+					border: solid var(--primary);
+					border-width: 0 0.05rem 0.05rem 0;
+					display: inline-block;
+					padding: 0.3rem;
+					transform: translateX(-1.6rem) rotate(-45deg);
+					-webkit-transform: translateX(-1.6rem) rotate(-45deg);
+					animation-delay: 0.1s;
+					transition: all 0.3s;
+				}
+			}
+		}
+	}
+	&:hover {
+		.c-link__button {
+			&::before {
+				width: 105%;
+			}
+			&__text {
+				color: var(--white);
+			}
+			&__arrow {
+				&--right {
+					&::before {
+						opacity: 0;
+					}
+					&::after {
+						border: solid var(--white);
+						border-width: 0 0.1rem 0.1rem 0;
+						display: inline-block;
+						padding: 1.2rem;
+						transform: translateX(-1rem) rotate(-45deg);
+						-webkit-transform: translateX(-1rem) rotate(-45deg);
+					}
+				}
+			}
+		}
+	}
+}

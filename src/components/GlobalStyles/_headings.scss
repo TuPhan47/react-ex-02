@@ -1,0 +1,10 @@
+.hdg {
+	font-size: 4rem;
+	color: var(--primary);
+	& + .txt-base {
+		margin-top: 1rem;
+	}
+	&--green {
+		color: var(--green);
+	}
+}
